@@ -13,6 +13,8 @@
 		4BC57C88264AF7CF0038DCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC57C72264AF7CF0038DCB2 /* Assets.xcassets */; };
 		4BC57C92264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C91264AF8300038DCB2 /* SvelteKitCounter.swift */; };
 		4BC57C93264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C91264AF8300038DCB2 /* SvelteKitCounter.swift */; };
+		4BC57C95264AF8E60038DCB2 /* AnimationCompletionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */; };
+		4BC57C96264AF8E60038DCB2 /* AnimationCompletionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		4BC57C81264AF7CF0038DCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BC57C82264AF7CF0038DCB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4BC57C91264AF8300038DCB2 /* SvelteKitCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvelteKitCounter.swift; sourceTree = "<group>"; };
+		4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCompletionObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				4BC57C91264AF8300038DCB2 /* SvelteKitCounter.swift */,
 				4BC57C70264AF7CD0038DCB2 /* sveltekit_counterApp.swift */,
 				4BC57C72264AF7CF0038DCB2 /* Assets.xcassets */,
+				4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 			files = (
 				4BC57C83264AF7CF0038DCB2 /* sveltekit_counterApp.swift in Sources */,
 				4BC57C92264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */,
+				4BC57C95264AF8E60038DCB2 /* AnimationCompletionObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 			files = (
 				4BC57C84264AF7CF0038DCB2 /* sveltekit_counterApp.swift in Sources */,
 				4BC57C93264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */,
+				4BC57C96264AF8E60038DCB2 /* AnimationCompletionObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
