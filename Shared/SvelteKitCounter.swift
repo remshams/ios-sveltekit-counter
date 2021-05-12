@@ -28,22 +28,21 @@ struct SvelteKitCounter: View {
           .fill(Color.white)
           .frame(width: 120)
           .ignoresSafeArea()
-          .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+          .zIndex(1)
         ZStack {
           ForEach(1..<12) { index in
-            Text("\(count + index)").font(.system(size: 120)).offset(y: CGFloat(-120 * index))
+            Count(count: count + index, yOffset: -120 * index)
           }
-          
-          Text("\(count)").font(.system(size: 120))
+          Count(count: count, yOffset: 0)
           ForEach(1..<12) { index in
-            Text("\(count - index)").font(.system(size: 120)).offset(y: CGFloat(120 * index))
+            Count(count: count - index, yOffset: 120 * index)
           }
         }.offset(y: CGFloat(offset))
         Rectangle()
           .fill(Color.white)
           .frame(width: 120)
-          .zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
           .ignoresSafeArea()
+          .zIndex(1)
       }
       
       Button(action: {
@@ -59,6 +58,18 @@ struct SvelteKitCounter: View {
       count = nextCount
       offset = 0
     }
+  }
+}
+
+struct Count: View {
+  let count: Int
+  let yOffset: Int
+  
+  var body: some View {
+    Text("\(count)")
+      .font(.system(size: 120))
+      .foregroundColor(.red)
+      .offset(y: CGFloat(yOffset))
   }
 }
 
