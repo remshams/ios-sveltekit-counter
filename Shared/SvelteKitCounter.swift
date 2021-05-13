@@ -11,8 +11,12 @@ struct SvelteKitCounter: View {
   
   
   var body: some View {
-    VStack {
-      Backdrop().zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+    VStack(spacing: 0) {
+      Backdrop {
+        Image("svelte-welcome")
+          .resizable()
+          .scaledToFit()
+      }.zIndex(1)
       Counter()
       Backdrop()
     }
@@ -43,7 +47,8 @@ struct Backdrop: View {
 #if DEBUG
 struct SvelteKitCounter_Previews: PreviewProvider {
   static var previews: some View {
-    SvelteKitCounter()
+    SvelteKitCounter().previewLayout(.sizeThatFits)
+    SvelteKitCounter().previewLayout(.fixed(width: 2532 / 3.0, height: 1170 / 3.0))
   }
 }
 #endif
