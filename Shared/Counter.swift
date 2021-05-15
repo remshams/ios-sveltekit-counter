@@ -15,36 +15,30 @@ struct Counter: View {
   private let fontsize = 120
 
   var body: some View {
-    VStack {
-      CounterSepator()
-      HStack {
-        Spacer()
-        CounterButton(
-          count: $nextCount,
-          offset: $offset,
-          sfImage: Image(systemName: "minus"),
-          offsetChange: -fontsize,
-          countChange: -1
-        )
-        Spacer()
-        CounterDisplay(count: count, offset: offset, fontsize: fontsize)
-        Spacer()
-        CounterButton(
-          count: $nextCount,
-          offset: $offset,
-          sfImage: Image(systemName: "plus"),
-          offsetChange: fontsize,
-          countChange: 1
-        )
-        Spacer()
-      }.onAnimationCompleted(for: CGFloat(offset)) {
-        count = nextCount
-        offset = 0
-      }
-      CounterSepator()
+    HStack {
+      Spacer()
+      CounterButton(
+        count: $nextCount,
+        offset: $offset,
+        sfImage: Image(systemName: "minus"),
+        offsetChange: -fontsize,
+        countChange: -1
+      )
+      Spacer()
+      CounterDisplay(count: count, offset: offset, fontsize: fontsize)
+      Spacer()
+      CounterButton(
+        count: $nextCount,
+        offset: $offset,
+        sfImage: Image(systemName: "plus"),
+        offsetChange: fontsize,
+        countChange: 1
+      )
+      Spacer()
+    }.onAnimationCompleted(for: CGFloat(offset)) {
+      count = nextCount
+      offset = 0
     }
-    .padding(.leading)
-    .padding(.trailing)
   }
 }
 
@@ -97,15 +91,6 @@ private struct CounterText: View {
       .font(.system(size: CGFloat(fontsize)))
       .foregroundColor(.red)
       .offset(y: CGFloat(offset))
-  }
-}
-
-private struct CounterSepator: View {
-  var body: some View {
-    Rectangle()
-      .fill(Color.gray)
-      .opacity(0.5)
-      .frame(height: 1)
   }
 }
 

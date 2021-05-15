@@ -10,16 +10,35 @@ import SwiftUI
 struct SvelteKitCounter: View {
   var body: some View {
     VStack(spacing: 0) {
-      Backdrop {
-        Header()
-      }.zIndex(1)
-      Counter()
-      Backdrop()
+      Header().coverBackground().zIndex(1)
+      CounterContent()
+      CoverBackground()
     }
   }
 }
 
-struct Backdrop: View {
+private struct CounterContent: View {
+  var body: some View {
+    VStack {
+      Separator()
+      Counter()
+      Separator()
+    }
+    .padding(.leading)
+    .padding(.trailing)
+  }
+}
+
+private struct Separator: View {
+  var body: some View {
+    Rectangle()
+      .fill(Color.gray)
+      .opacity(0.5)
+      .frame(height: 1)
+  }
+}
+
+private struct CoverBackground: View {
   let content: AnyView
 
   init<Content: View>(@ViewBuilder content: () -> Content) {
@@ -36,6 +55,16 @@ struct Backdrop: View {
     ZStack {
       Rectangle().fill(Color.white).ignoresSafeArea()
       content
+    }
+  }
+}
+
+extension View {
+  func coverBackground() -> some View {
+    ZStack {
+      CoverBackground {
+        self
+      }
     }
   }
 }
