@@ -12,7 +12,7 @@ struct SvelteKitCounter: View {
     VStack(spacing: 0) {
       Header().coverBackground().zIndex(1)
       CounterContent()
-      CoverBackground()
+      Footer().coverBackground()
     }
   }
 }
