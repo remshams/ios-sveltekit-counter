@@ -13,9 +13,7 @@ struct SvelteKitCounter: View {
   var body: some View {
     VStack(spacing: 0) {
       Backdrop {
-        Image("svelte-welcome")
-          .resizable()
-          .scaledToFit()
+        Header()
       }.zIndex(1)
       Counter()
       Backdrop()

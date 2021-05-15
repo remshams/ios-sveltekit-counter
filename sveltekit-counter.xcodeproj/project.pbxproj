@@ -17,6 +17,8 @@
 		4BC57C96264AF8E60038DCB2 /* AnimationCompletionObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */; };
 		4BC57C98264D59910038DCB2 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C97264D59910038DCB2 /* Counter.swift */; };
 		4BC57C99264D59910038DCB2 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C97264D59910038DCB2 /* Counter.swift */; };
+		4BC57C9B264D8B7D0038DCB2 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C9A264D8B7D0038DCB2 /* Header.swift */; };
+		4BC57C9C264D8B7D0038DCB2 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC57C9A264D8B7D0038DCB2 /* Header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		4BC57C91264AF8300038DCB2 /* SvelteKitCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvelteKitCounter.swift; sourceTree = "<group>"; };
 		4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCompletionObserver.swift; sourceTree = "<group>"; };
 		4BC57C97264D59910038DCB2 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		4BC57C9A264D8B7D0038DCB2 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 				4BC57C72264AF7CF0038DCB2 /* Assets.xcassets */,
 				4BC57C94264AF8E60038DCB2 /* AnimationCompletionObserver.swift */,
 				4BC57C97264D59910038DCB2 /* Counter.swift */,
+				4BC57C9A264D8B7D0038DCB2 /* Header.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC57C9B264D8B7D0038DCB2 /* Header.swift in Sources */,
 				4BC57C98264D59910038DCB2 /* Counter.swift in Sources */,
 				4BC57C83264AF7CF0038DCB2 /* sveltekit_counterApp.swift in Sources */,
 				4BC57C92264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */,
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BC57C9C264D8B7D0038DCB2 /* Header.swift in Sources */,
 				4BC57C99264D59910038DCB2 /* Counter.swift in Sources */,
 				4BC57C84264AF7CF0038DCB2 /* sveltekit_counterApp.swift in Sources */,
 				4BC57C93264AF8300038DCB2 /* SvelteKitCounter.swift in Sources */,
