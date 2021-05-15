@@ -21,9 +21,9 @@ struct Header: View {
 }
 
 #if DEBUG
-struct Header_Previews: PreviewProvider {
-  static var previews: some View {
-    Header()
+  struct Header_Previews: PreviewProvider {
+    static var previews: some View {
+      Header()
+    }
   }
-}
 #endif

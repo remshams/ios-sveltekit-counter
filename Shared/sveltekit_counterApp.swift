@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct sveltekit_counterApp: App {
-    var body: some Scene {
-        WindowGroup {
-            SvelteKitCounter()
-        }
+struct SveltekitCounterApp: App {
+  var body: some Scene {
+    WindowGroup {
+      SvelteKitCounter()
     }
+  }
 }
