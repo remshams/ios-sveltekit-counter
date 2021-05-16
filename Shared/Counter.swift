@@ -11,24 +11,39 @@ import SwiftUI
 struct Counter: View {
   @State var count = 0
   @State var offset = 0
-  @State var nextCount = 0
+  @State var offsetOnAnimationStart = 0
+  @State var countChange = 0
+
   private let fontsize = 120
 
   var body: some View {
     HStack {
       Spacer()
       CounterButton(
-        count: $nextCount,
+        count: $countChange,
         offset: $offset,
         sfImage: Image(systemName: "minus"),
         offsetChange: -fontsize,
         countChange: -1
       )
       Spacer()
-      CounterDisplay(count: count, offset: offset, fontsize: fontsize)
+      CounterDisplay(count: count, offset: offset, fontsize: fontsize).gesture(DragGesture()
+        .onChanged {
+          offset = offsetOnAnimationStart + Int($0.translation.height)
+        }.onEnded { _ in
+          withAnimation(.spring(response: 0.5, dampingFraction: 0.4)) {
+            let remainder = abs(offset % fontsize)
+            let diff = remainder > fontsize / 2 ? fontsize - remainder : remainder * -1
+            offset = offset > 0 ? offset + diff : offset - diff
+            offsetOnAnimationStart = offset
+
+            countChange = offset / fontsize
+          }
+
+        })
       Spacer()
       CounterButton(
-        count: $nextCount,
+        count: $countChange,
         offset: $offset,
         sfImage: Image(systemName: "plus"),
         offsetChange: fontsize,
@@ -36,8 +51,10 @@ struct Counter: View {
       )
       Spacer()
     }.onAnimationCompleted(for: CGFloat(offset)) {
-      count = nextCount
+      count += countChange
+      countChange = 0
       offset = 0
+      offsetOnAnimationStart = 0
     }
   }
 }
