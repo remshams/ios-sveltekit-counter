@@ -88,20 +88,21 @@ private struct CounterDisplay: View {
           // "abs" as difference can be positive or negative depending on the drag direction
           let distanceFromLastFullStep = abs(offset % offsetStep)
           offset = self.nomalizeToOffsetStep(distanceFromLastFullStep: distanceFromLastFullStep)
-          
+
           // The count is equivalent to the number of complete steps
           countChange = offset / offsetStep
         }
 
       })
-    /**
-     * Is re required as count can also be increased by buttons (not just the drag gesture)
-     * With the help of "onAnimationCompleted" the same logic both for the count change by button or drag animation can be used
-     */
+    /*
+     Is re required as count can also be increased by buttons (not just the drag gesture)
+     With the help of "onAnimationCompleted" the same logic both for the count change by button
+     or drag animation can be used
+    */
     .onAnimationCompleted(for: CGFloat(offset)) {
       // Increase/Descrease count by the number of complete steps
       count += countChange
-      
+
       // Reset animation state variables
       countChange = 0
       offset = 0
